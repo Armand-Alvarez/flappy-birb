@@ -2,7 +2,7 @@
 
 | This doc will also serve as a template / how-to document for making writing future Game Architecture Docs easier 
 
-## Features - ordered list of features (usually gameplay features)
+## Features 
 
 - [ ] Main menu
 	- [ ] Run (new game / current game)
