@@ -1,9 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734758467
+::res://::1734758479
 icon.svg::CompressedTexture2D::363995663544203928::1734740244::1734740244::1::::<><>::
 README.md::TextFile::-1::1734757623::0::1::::<><>::
 ::res://src/::1734758459
-::res://src/scenes/::1734758467
-game.tscn::PackedScene::3406696704813293394::1734758473::0::1::::<><>::
-Menu.tscn::PackedScene::3899373197608293822::1734758473::0::1::::<><>::
-::res://src/scripts/::1734757681
+::res://src/scenes/::1734758612
+game.tscn::PackedScene::3406696704813293394::1734759253::0::1::::<><>::res://src/scripts/game.gd
+menu.tscn::PackedScene::3899373197608293822::1734758571::0::1::::<><>::res://src/scripts/menu.gd
+::res://src/scripts/::1734759078
+menu.gd::GDScript::-1::1734759078::0::1::::Menu<>Control<>::
+game.gd::GDScript::-1::1734759242::0::1::::Main<>Node2D<>::
