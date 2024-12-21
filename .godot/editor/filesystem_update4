@@ -7,3 +7,4 @@ res://src/scenes/menu.tscn
 res://src/scripts/menu.gd
 res://src/scripts/game.gd
 res://src/scripts/main.gd
+res://src/scenes/main.tscn
