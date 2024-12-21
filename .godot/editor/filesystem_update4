@@ -1,0 +1,8 @@
+res://game.tscn
+res://src/Game.gd
+res://Menu.tscn
+res://src/scenes/Menu.tscn
+res://src/scenes/game.tscn
+res://src/scenes/menu.tscn
+res://src/scripts/menu.gd
+res://src/scripts/game.gd
