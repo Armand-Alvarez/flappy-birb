@@ -1,2 +1,6 @@
+CenterContainer
+Camera2D
+Sprite2D
+Node2D
 Button
 VBoxContainer

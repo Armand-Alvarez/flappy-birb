@@ -2,9 +2,13 @@ class_name Menu
 extends Control
 
 
+signal start_button_pressed
+signal quit_button_pressed
+
+
 func _on_start_button_pressed() -> void:
-	pass # Replace with function body.
+	start_button_pressed.emit()
 
 
 func _on_quit_button_pressed() -> void:
-	get_tree().quit()
+	quit_button_pressed.emit()
