@@ -6,9 +6,9 @@
 
 - [x] Main menu
 	- [x] TODO: Center menu
-- [ ] Bird movement
+- [x] Bird movement
 	- [x] Bird continuously moves downward, accelerated by gravity
-	- [ ] Spacebar jumps
+	- [x] Spacebar jumps
 - [ ] Game run
 	- [ ] Score goes up as you stay alive
 	- [ ] Hitting a pipe ends run
