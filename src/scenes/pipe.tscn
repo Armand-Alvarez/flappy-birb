@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0j8iu6i2l86i"]
+
+[ext_resource type="Texture2D" uid="uid://cwneqyknc0rqr" path="res://assets/Flappy Bird Assets/Tiles/Style 1/PipeStyle1.png" id="1_0yktp"]
+[ext_resource type="Script" path="res://src/scripts/pipe.gd" id="1_ry8h6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15h6o"]
+size = Vector2(26, 867)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0ypy"]
+atlas = ExtResource("1_0yktp")
+region = Rect2(0, 32, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng58x"]
+atlas = ExtResource("1_0yktp")
+region = Rect2(0, 32, 32, 16)
+
+[node name="Pipe" type="Node2D"]
+script = ExtResource("1_ry8h6")
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -412.5)
+shape = SubResource("RectangleShape2D_15h6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_y0ypy")
+
+[node name="Extension" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, -444)
+scale = Vector2(1, 52.5)
+texture = SubResource("AtlasTexture_ng58x")

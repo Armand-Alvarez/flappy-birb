@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://qkos51en0ycd"]
+
+[ext_resource type="PackedScene" uid="uid://d0j8iu6i2l86i" path="res://src/scenes/pipe.tscn" id="1_fsy2u"]
+
+[node name="Pipes" type="Node2D"]
+
+[node name="TopPipe" parent="." instance=ExtResource("1_fsy2u")]
+
+[node name="Bottom Pipe" parent="." instance=ExtResource("1_fsy2u")]
+position = Vector2(0, 112)
+rotation = 3.14159
