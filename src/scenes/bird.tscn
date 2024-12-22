@@ -8,7 +8,9 @@ atlas = ExtResource("1_do8ps")
 region = Rect2(0, 0, 16, 16)
 
 [node name="CharacterBody2D" type="RigidBody2D"]
+gravity_scale = 0.6
 script = ExtResource("1_hvv26")
+jump_multiplier = 350.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(7.055, 7.055)
