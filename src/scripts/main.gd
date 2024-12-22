@@ -12,8 +12,13 @@ const game_states = {
 
 func _ready() -> void:
 	self.add_child(game_states["Menu"].instantiate())
+	set_up_signalbus_connections()
+
+
+func set_up_signalbus_connections() -> void:
 	SignalBus.start_button_pressed.connect(_on_menu_start_button_pressed)
 	SignalBus.quit_button_pressed.connect(_on_menu_quit_button_pressed)
+	SignalBus.deathbox_hit.connect(_on_deathbox_hit)
 
 
 func switch_states(state: String) -> void:
@@ -38,3 +43,6 @@ func _on_menu_start_button_pressed() -> void:
 
 func _on_menu_quit_button_pressed() -> void:
 	get_tree().quit()
+
+func _on_deathbox_hit() -> void:
+	print("hit")
