@@ -4,10 +4,10 @@
 
 ## Features 
 
-- [-] Main menu
-	- [ ] TODO: Center menu
+- [x] Main menu
+	- [x] TODO: Center menu
 - [ ] Bird movement
-	- [ ] Bird continuously moves downward, accelerated by gravity
+	- [x] Bird continuously moves downward, accelerated by gravity
 	- [ ] Spacebar jumps
 - [ ] Game run
 	- [ ] Score goes up as you stay alive
@@ -20,7 +20,7 @@
 	- [ ] Bird moving in pipe is registered collision
 - [ ] Parralax background 
 - [ ] Textures/anims
-	- [ ] Bird texture
+	- [x] Bird texture
 	- [ ] Pipe texture
 	- [ ] Jumping animation
 
