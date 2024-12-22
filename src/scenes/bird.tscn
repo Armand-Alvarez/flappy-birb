@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqt2jr6dfrfoh"]
+[gd_scene load_steps=4 format=3 uid="uid://dqt2jr6dfrfoh"]
 
 [ext_resource type="Texture2D" uid="uid://b5v7k3pea2oyg" path="res://assets/Flappy Bird Assets/Player/StyleBird1/AllBird1.png" id="1_do8ps"]
+[ext_resource type="Script" path="res://src/scripts/bird.gd" id="1_hvv26"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6wdsn"]
 atlas = ExtResource("1_do8ps")
 region = Rect2(0, 0, 16, 16)
 
 [node name="CharacterBody2D" type="RigidBody2D"]
+script = ExtResource("1_hvv26")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(7.055, 7.055)
