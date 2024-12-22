@@ -9,15 +9,15 @@
 - [x] Bird movement
 	- [x] Bird continuously moves downward, accelerated by gravity
 	- [x] Spacebar jumps
+- [ ] Pipes
+	- [ ] Pipes spawn in on top & bottom with random passage height
+	- [ ] Pipes move to left, despawn when outside viewport
+	- [ ] Bird moving in pipe is registered collision
 - [ ] Game run
 	- [ ] Score goes up as you stay alive
 	- [ ] Hitting a pipe ends run
 	- [ ] Run ending sends back to main menu
 - [ ] Score counter
-- [ ] Pipes
-	- [ ] Pipes spawn in on top & bottom with random passage height
-	- [ ] Pipes move to left, despawn when outside viewport
-	- [ ] Bird moving in pipe is registered collision
 - [ ] Parralax background 
 - [ ] Textures/anims
 	- [x] Bird texture
