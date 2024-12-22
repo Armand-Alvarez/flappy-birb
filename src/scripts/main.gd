@@ -6,12 +6,8 @@ const game_states = {
 	"Menu": preload("res://src/scenes/menu.tscn"),
 	"Game": preload("res://src/scenes/game.tscn"),
 }
-const game_state_node_names = {
-	"menu": "Menu",
-	"game": "Game",
-}
 
-@onready var game_state = "menu"
+@onready var game_state = "Menu"
 
 
 func _ready() -> void:
@@ -23,27 +19,23 @@ func _ready() -> void:
 
 func switch_states(state: String) -> void:
 	match state:
-		"menu":
-			var current_state = game_state
-			var current_node_name = game_state_node_names[current_state]
-			var current_node = find_child(current_node_name, true, false)
-			var scene = game_states["Menu"]
-			$UIContainer.add_child(scene.instantiate())
+		"Menu":
+			var current_node = find_child(game_state, true, false)
+			var scene_to_load = game_states["Menu"]
+			$UIContainer.add_child(scene_to_load.instantiate())
 			current_node.queue_free()
-			game_state = "menu"
-		"game":
+			game_state = "Menu"
+		"Game":
 			self.print_tree()
-			var current_state = game_state
-			var current_node_name = game_state_node_names[current_state]
-			var current_node = find_child(current_node_name, true, false)
-			var scene = game_states["Game"]
-			self.add_child(scene.instantiate())
+			var current_node = find_child(game_state, true, false)
+			var scene_to_load = game_states["Game"]
+			self.add_child(scene_to_load.instantiate())
 			current_node.queue_free()
-			game_state = "game"
+			game_state = "Game"
 
 
 func _on_menu_start_button_pressed() -> void:
-	switch_states("game")
+	switch_states("Game")
 
 func _on_menu_quit_button_pressed() -> void:
 	get_tree().quit()
