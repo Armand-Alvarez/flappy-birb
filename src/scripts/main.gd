@@ -19,6 +19,7 @@ func set_up_signalbus_connections() -> void:
 	SignalBus.start_button_pressed.connect(_on_menu_start_button_pressed)
 	SignalBus.quit_button_pressed.connect(_on_menu_quit_button_pressed)
 	SignalBus.deathbox_hit.connect(_on_deathbox_hit)
+	SignalBus.scorebox_hit.connect(_on_scorebox_hit)
 
 
 func switch_states(state: String) -> void:
@@ -45,4 +46,7 @@ func _on_menu_quit_button_pressed() -> void:
 	get_tree().quit()
 
 func _on_deathbox_hit() -> void:
-	print("hit")
+	print("Dead")
+
+func _on_scorebox_hit() -> void:
+	print("increase score!")
