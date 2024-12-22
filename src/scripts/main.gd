@@ -1,5 +1,5 @@
 class_name Main
-extends Node2D
+extends Node
 
 
 const game_states = {
@@ -11,8 +11,7 @@ const game_states = {
 
 
 func _ready() -> void:
-	var ui_container: CenterContainer = $UIContainer
-	ui_container.add_child(game_states["Menu"].instantiate())
+	self.add_child(game_states["Menu"].instantiate())
 	SignalBus.start_button_pressed.connect(_on_menu_start_button_pressed)
 	SignalBus.quit_button_pressed.connect(_on_menu_quit_button_pressed)
 
