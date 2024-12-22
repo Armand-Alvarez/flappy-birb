@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqt2jr6dfrfoh"]
+
+[ext_resource type="Texture2D" uid="uid://b5v7k3pea2oyg" path="res://assets/Flappy Bird Assets/Player/StyleBird1/AllBird1.png" id="1_do8ps"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wdsn"]
+atlas = ExtResource("1_do8ps")
+region = Rect2(0, 0, 16, 16)
+
+[node name="CharacterBody2D" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(7.055, 7.055)
+texture = SubResource("AtlasTexture_6wdsn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(7.055, 7.055)
+polygon = PackedVector2Array(-4, 5, -4, -2, -3, -3, -1, -4, 2, -4, 5, -1, 5, 0, 6, 1, 6, 1, 6, 3, 6, 4, 6, 4, 4, 6, -3, 6)
