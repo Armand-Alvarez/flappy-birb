@@ -16,10 +16,11 @@ region = Rect2(0, 32, 32, 16)
 
 [node name="Pipe" type="Node2D"]
 script = ExtResource("1_ry8h6")
+speed = 70.0
 
-[node name="StaticBody2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -412.5)
 shape = SubResource("RectangleShape2D_15h6o")
 
@@ -30,3 +31,5 @@ texture = SubResource("AtlasTexture_y0ypy")
 position = Vector2(0, -444)
 scale = Vector2(1, 52.5)
 texture = SubResource("AtlasTexture_ng58x")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
