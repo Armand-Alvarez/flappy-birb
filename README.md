@@ -4,7 +4,8 @@
 
 ## Features 
 
-- [ ] Main menu
+- [-] Main menu
+	- [ ] TODO: Center menu
 - [ ] Bird movement
 	- [ ] Bird continuously moves downward, accelerated by gravity
 	- [ ] Spacebar jumps
