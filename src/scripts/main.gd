@@ -15,7 +15,6 @@ const game_state_node_names = {
 
 
 func _ready() -> void:
-
 	var ui_container: CenterContainer = $UIContainer
 	ui_container.add_child(game_states["Menu"].instantiate())
 	SignalBus.start_button_pressed.connect(_on_menu_start_button_pressed)
@@ -26,9 +25,11 @@ func switch_states(state: String) -> void:
 	match state:
 		"menu":
 			var current_state = game_state
+			var current_node_name = game_state_node_names[current_state]
+			var current_node = find_child(current_node_name, true, false)
 			var scene = game_states["Menu"]
 			$UIContainer.add_child(scene.instantiate())
-			self.get_node(current_state).queue_free()
+			current_node.queue_free()
 			game_state = "menu"
 		"game":
 			self.print_tree()
