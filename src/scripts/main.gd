@@ -41,6 +41,7 @@ func switch_states(state: String) -> void:
 
 func _on_menu_start_button_pressed() -> void:
 	switch_states("Game")
+	$"Spawn Timer".start()
 
 func _on_menu_quit_button_pressed() -> void:
 	get_tree().quit()
@@ -52,8 +53,10 @@ func _on_scorebox_hit() -> void:
 	print("increase score!")
 
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("Destruction area entered by %s" % area)
+func _on_destruction_box_hit(area: Area2D) -> void:
+	print("Destruction area entered")
+	area.get_parent().get_parent().queue_free()
+	
 
 
 func _on_spawn_timer_timeout() -> void:
