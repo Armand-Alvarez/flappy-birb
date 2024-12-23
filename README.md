@@ -9,10 +9,10 @@
 - [x] Bird movement
 	- [x] Bird continuously moves downward, accelerated by gravity
 	- [x] Spacebar jumps
-- [ ] Pipes
-	- [ ] Pipes spawn in on top & bottom with random passage height
-	- [ ] Pipes move to left, despawn when outside viewport
-	- [ ] Bird moving in pipe is registered collision
+- [x] Pipes
+	- [x] Pipes spawn in on top & bottom with random passage height
+	- [x] Pipes move to left, despawn when outside viewport
+	- [x] Bird moving in pipe is registered collision
 - [ ] Game run
 	- [ ] Score goes up as you stay alive
 	- [ ] Hitting a pipe ends run
