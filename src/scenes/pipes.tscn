@@ -6,16 +6,16 @@
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e0ibt"]
 
 [node name="Pipes" type="Node2D"]
-position = Vector2(3, 82)
 script = ExtResource("1_cqqdl")
 
 [node name="TopPipe" parent="." instance=ExtResource("1_fsy2u")]
 
 [node name="Bottom Pipe" parent="." instance=ExtResource("1_fsy2u")]
-position = Vector2(0, 112)
+position = Vector2(0, 252)
 rotation = 3.14159
 
 [node name="Score Collision" type="Area2D" parent="."]
+scale = Vector2(1, 2.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Collision"]
 position = Vector2(0, 24)
