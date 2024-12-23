@@ -12,5 +12,3 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	SignalBus.deathbox_hit.emit()
-
-
