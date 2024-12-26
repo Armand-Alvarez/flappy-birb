@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dqt2jr6dfrfoh" path="res://src/scenes/bird.tscn" id="1_guin4"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" groups=["ScenesToClear"]]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_guin4")]
 position = Vector2(146, 143)

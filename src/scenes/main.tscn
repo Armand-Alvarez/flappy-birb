@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bosh2dloxdoxe"]
+[gd_scene load_steps=4 format=3 uid="uid://bosh2dloxdoxe"]
 
 [ext_resource type="Script" path="res://src/scripts/main.gd" id="1_yh1oj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jhtl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6uc0t"]
+size = Vector2(1330, 20)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_yh1oj")
@@ -21,7 +24,6 @@ shape = SubResource("RectangleShape2D_4jhtl")
 wait_time = 3.0
 
 [node name="ScoreLabel" type="Label" parent="."]
-visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -33,5 +35,21 @@ theme_override_font_sizes/font_size = 56
 text = "0"
 horizontal_alignment = 2
 
+[node name="Deathbox" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathbox"]
+position = Vector2(582, -51)
+shape = SubResource("RectangleShape2D_6uc0t")
+
+[node name="Deathbox2" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathbox2"]
+position = Vector2(591, 692)
+shape = SubResource("RectangleShape2D_6uc0t")
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_destruction_box_hit"]
 [connection signal="timeout" from="Spawn Timer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="body_entered" from="Deathbox" to="." method="_on_deathbox_body_entered"]
+[connection signal="body_entered" from="Deathbox2" to="." method="_on_deathbox_body_entered"]

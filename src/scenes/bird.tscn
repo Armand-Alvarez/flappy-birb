@@ -11,6 +11,7 @@ region = Rect2(0, 0, 16, 16)
 radius = 5.53526
 
 [node name="Bird" type="RigidBody2D"]
+collision_layer = 2
 gravity_scale = 0.78
 script = ExtResource("1_hvv26")
 jump_multiplier = 380.0
