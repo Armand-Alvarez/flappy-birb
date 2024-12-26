@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d0j8iu6i2l86i" path="res://src/scenes/pipe.tscn" id="1_fsy2u"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e0ibt"]
+b = Vector2(0, 20.7813)
 
 [node name="Pipes" type="Node2D"]
 position = Vector2(3, 82)
@@ -12,7 +13,7 @@ script = ExtResource("1_cqqdl")
 [node name="TopPipe" parent="." instance=ExtResource("1_fsy2u")]
 
 [node name="Bottom Pipe" parent="." instance=ExtResource("1_fsy2u")]
-position = Vector2(0, 112)
+position = Vector2(0, 179)
 rotation = 3.14159
 
 [node name="Score Collision" type="Area2D" parent="."]
