@@ -11,9 +11,9 @@ region = Rect2(0, 0, 16, 16)
 radius = 5.53526
 
 [node name="Bird" type="RigidBody2D"]
-gravity_scale = 0.67
+gravity_scale = 0.78
 script = ExtResource("1_hvv26")
-jump_multiplier = 350.0
+jump_multiplier = 380.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(7.055, 7.055)
