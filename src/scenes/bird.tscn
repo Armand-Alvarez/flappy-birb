@@ -16,8 +16,10 @@ script = ExtResource("1_hvv26")
 jump_multiplier = 350.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(7.055, 7.055)
 texture = SubResource("AtlasTexture_6wdsn")
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(1, 9)
+scale = Vector2(7.055, 7.055)
 shape = SubResource("CircleShape2D_cpdoi")

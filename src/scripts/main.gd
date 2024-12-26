@@ -56,7 +56,7 @@ func _on_scorebox_hit() -> void:
 func _on_destruction_box_hit(area: Area2D) -> void:
 	print("Destruction area entered")
 	area.get_parent().get_parent().queue_free()
-	
+
 
 
 func _on_spawn_timer_timeout() -> void:
