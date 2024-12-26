@@ -19,4 +19,3 @@ func _process(_delta: float) -> void:
 func _on_deathbox_hit() -> void:
 	self.set_process(false)
 	$CollisionPolygon2D.queue_free()
-

@@ -48,21 +48,11 @@ func switch_states(state_to_load: String) -> void:
 			score = 0
 			$ScoreLabel.show()
 		"Death":
-			var scenes_to_load = ["Game", "Menu"]
-			for scene in scenes_to_load:
-				if find_child(scene, true, false):
-					pass
-				else:
-					self.add_child(game_scenes[scene].instantiate())
+			self.add_child(game_scenes["Menu"].instantiate())
 
 func clear_states() -> void:
-	print('tring to clear states')
-	print('tree before clear:')
-	print_tree_pretty()
-	for node in get_nodes_in_group("ScenesToClear"):
+	for node in get_tree().get_nodes_in_group("ScenesToDelete"):
 		node.queue_free()
-	print('tree after clear')
-	print_tree_pretty()
 
 
 func _on_menu_start_button_pressed() -> void:
@@ -73,11 +63,9 @@ func _on_menu_quit_button_pressed() -> void:
 	get_tree().quit()
 
 func _on_deathbox_hit() -> void:
-	print("Dead")
 	switch_states("Death")
 
 func _on_scorebox_hit() -> void:
-	print("Score")
 	score += 1
 
 
@@ -91,5 +79,5 @@ func _on_spawn_timer_timeout() -> void:
 	spawn_marker.add_child(pipes_scene.instantiate())
 
 
-func _on_deathbox_body_entered(body: Node2D) -> void:
+func _on_deathbox_body_entered(_body: Node2D) -> void:
 	SignalBus.deathbox_hit.emit()

@@ -6,7 +6,7 @@
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e0ibt"]
 b = Vector2(0, 20.7813)
 
-[node name="Pipes" type="Node2D"]
+[node name="Pipes" type="Node2D" groups=["ScenesToDelete"]]
 position = Vector2(3, 24)
 script = ExtResource("1_cqqdl")
 y_offset_range_max = 440
