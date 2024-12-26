@@ -1,8 +1,8 @@
 class_name Pipes
 extends Node2D
 
-@export var y_offset_range_min = 69
-@export var y_offset_range_max = 480
+@export var y_offset_range_min = 0
+@export var y_offset_range_max = 400
 
 
 func _ready() -> void:

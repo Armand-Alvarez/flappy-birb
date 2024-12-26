@@ -7,8 +7,9 @@
 b = Vector2(0, 20.7813)
 
 [node name="Pipes" type="Node2D"]
-position = Vector2(3, 82)
+position = Vector2(3, 24)
 script = ExtResource("1_cqqdl")
+y_offset_range_max = 440
 
 [node name="TopPipe" parent="." instance=ExtResource("1_fsy2u")]
 
