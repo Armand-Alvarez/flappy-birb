@@ -13,11 +13,11 @@
 	- [x] Pipes spawn in on top & bottom with random passage height
 	- [x] Pipes move to left, despawn when outside viewport
 	- [x] Bird moving in pipe is registered collision
-- [ ] Game run
+- [x] Game run
 	- [x] Score goes up as you stay alive
-	- [ ] Hitting a pipe ends run
-	- [ ] Run ending sends back to main menu
-- [ ] Score counter
+	- [x] Hitting a pipe ends run
+	- [x] Run ending opens a menu and continues to spawn pipes; player control of Bird is disabled
+- [x] Score counter
 - [ ] Parralax background 
 - [ ] Textures/anims
 	- [x] Bird texture
