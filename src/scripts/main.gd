@@ -9,11 +9,17 @@ const game_states = {
 
 @onready var game_state = "Menu"
 @onready var pipes_scene: PackedScene = preload("res://src/scenes/pipes.tscn")
+@onready var score = 0
 
 
 func _ready() -> void:
 	self.add_child(game_states["Menu"].instantiate())
 	set_up_signalbus_connections()
+	$ScoreLabel.hide()
+
+
+func _process(_delta: float) -> void:
+	$ScoreLabel.text = str(score)
 
 
 func set_up_signalbus_connections() -> void:
@@ -37,6 +43,8 @@ func switch_states(state: String) -> void:
 			self.add_child(scene_to_load.instantiate())
 			current_node.queue_free()
 			game_state = "Game"
+			score = 0
+			$ScoreLabel.show()
 
 
 func _on_menu_start_button_pressed() -> void:
@@ -50,16 +58,15 @@ func _on_deathbox_hit() -> void:
 	print("Dead")
 
 func _on_scorebox_hit() -> void:
-	print("increase score!")
+	print("Score")
+	score += 1
 
 
 func _on_destruction_box_hit(area: Area2D) -> void:
-	print("Destruction area entered")
 	area.get_parent().get_parent().queue_free()
 
 
 
 func _on_spawn_timer_timeout() -> void:
-	print("spawning pipe")
 	var spawn_marker = $SpawnMarker
 	spawn_marker.add_child(pipes_scene.instantiate())

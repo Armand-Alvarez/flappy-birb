@@ -20,5 +20,18 @@ shape = SubResource("RectangleShape2D_4jhtl")
 [node name="Spawn Timer" type="Timer" parent="."]
 wait_time = 3.0
 
+[node name="ScoreLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.675
+offset_right = -16.675
+offset_bottom = 77.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 56
+text = "0"
+horizontal_alignment = 2
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_destruction_box_hit"]
 [connection signal="timeout" from="Spawn Timer" to="." method="_on_spawn_timer_timeout"]
