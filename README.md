@@ -18,7 +18,7 @@
 	- [x] Hitting a pipe ends run
 	- [x] Run ending opens a menu and continues to spawn pipes; player control of Bird is disabled
 - [x] Score counter
-- [ ] Parralax background 
+- [x] Parralax background 
 - [ ] Textures/anims
 	- [x] Bird texture
 	- [ ] Pipe texture
