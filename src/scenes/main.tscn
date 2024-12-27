@@ -1,14 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://bosh2dloxdoxe"]
+[gd_scene load_steps=6 format=3 uid="uid://bosh2dloxdoxe"]
 
 [ext_resource type="Script" path="res://src/scripts/main.gd" id="1_yh1oj"]
+[ext_resource type="Texture2D" uid="uid://ddty1wb8kdh7p" path="res://assets/Flappy Bird Assets/Background/Background5.png" id="2_ivgyy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jhtl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_van10"]
+bg_color = Color(0, 0, 0, 0.180392)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6uc0t"]
 size = Vector2(1330, 20)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_yh1oj")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(1187.33, 0)
+autoscroll = Vector2(-15, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(573, 325)
+scale = Vector2(4.64, 2.76)
+texture = ExtResource("2_ivgyy")
 
 [node name="SpawnMarker" type="Marker2D" parent="."]
 position = Vector2(1308, 0)
@@ -32,6 +45,7 @@ offset_right = -16.675
 offset_bottom = 77.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_van10")
 text = "0"
 horizontal_alignment = 2
 
